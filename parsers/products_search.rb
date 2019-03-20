@@ -26,7 +26,7 @@ if current_page == 1 and scrape_url_nbr_products > products.length
 
 
   end
-elsif current_page == 0 and number_of_pages == 1
+elsif current_page == 1 and scrape_url_nbr_products <= products.length
   nbr_products_pg1 = products.length
 else
   nbr_products_pg1 = page['vars']['nbr_products_pg1']
