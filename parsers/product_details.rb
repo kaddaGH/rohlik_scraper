@@ -1,7 +1,7 @@
 data = JSON.parse(content)
 data= data['data']['product']
 
-promotion = "-"+data['goodPriceSalePercentage'].to_s+"%" rescue ""
+promotion = (data['goodPriceSalePercentage']>0)? "-"+data['goodPriceSalePercentage'].to_s+"%" :""
 
 
 
