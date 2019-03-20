@@ -6,7 +6,7 @@ promotion = "-"+data['goodPriceSalePercentage']+"%" rescue ""
 
 
 availability = (data['inStock'] == true) ? '1' : ''
-item_size_info = data['textualAmount']
+item_size_info = data['textualAmount']+data['productName']
 
 price = data['price']
 
@@ -28,7 +28,7 @@ brand = [
     'Xpress', 'Core Power', 'Runa', 'Zola', 'Outlaw', 'Uptime', 'Green Dragon', 'Gas Monkey',
     'Ruckpack', 'Xing', 'Clutch', 'Chew-A-Bull', 'Matchaah', 'Surge', 'Chew A Bull', 'Vitargo',
     'Star Nutrition', 'Monster Energy', 'Nutramino Fitness Nutrition', 'Olimp Sports Nutrition',
-    'Belgian Blue', 'Maxim', 'Biotech USA', 'Gainomax', 'Chained Nutrition','TNT'
+    'Belgian Blue', 'Maxim', 'Biotech USA', 'Gainomax', 'Chained Nutrition','TNT','Tchibo'
 ].find {|brand_name| data['productName'].downcase.include?(brand_name.downcase)} || ''
 
 
