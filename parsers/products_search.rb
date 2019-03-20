@@ -43,7 +43,7 @@ products.each_with_index do |product, i|
           'input_type' => page['vars']['input_type'],
           'search_term' => page['vars']['search_term'],
           'product_rank' => i + 1,
-          'page' => current_page + 1,
+          'page' => current_page ,
           'nbr_products_pg1' => nbr_products_pg1,
           'scrape_url_nbr_products' => scrape_url_nbr_products
 
