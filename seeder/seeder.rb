@@ -1,9 +1,6 @@
-require 'cgi'
-require './lib/headers'
 pages << {
     page_type: 'products_search',
     method: 'GET',
-    headers: ReqHeaders::REQ_HEADER,
     url: 'https://www.rohlik.cz/services/frontend-service/products/300108038?offset=0&limit=25',
     vars: {
         'input_type' => 'taxonomy',
@@ -14,14 +11,13 @@ pages << {
 
 }
 
-search_terms = ['Red Bull', 'RedBull','Energy Drink', 'Energy Drinks']
+search_terms = ['Red Bull', 'RedBull','Energy%20Drink', 'Energy%20Drinks']
 search_terms.each do |search_term|
 
   pages << {
       page_type: 'products_search',
       method: 'GET',
-      headers: ReqHeaders::REQ_HEADER,
-      url: "https://www.rohlik.cz/services/frontend-service/search/#{CGI.escape(search_term)}?companyId=1&limit=25&offset=0",
+      url: "https://www.rohlik.cz/services/frontend-service/search/#{search_term}?companyId=1&limit=25&offset=0",
       vars: {
           'input_type' => 'search',
           'search_term' => search_term,
