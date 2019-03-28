@@ -64,6 +64,7 @@ regexps = [
     /Box of (\d+)/,
     /Case of (\d+)/,
     /(\d+)\s?[Cc]ount/,
+    /(\d+)\s?[Kk]s/,
     /(\d+)\s?[Cc][Tt]/,
     /(\d+)\s?[Pp]/,
     /(\d+)[\s-]?Pack($|[^e])/,
